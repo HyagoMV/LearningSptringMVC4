@@ -13,10 +13,10 @@ public class Application {
 		ApplicationContext applicationContext = SpringApplication.run(Application.class);
 
 		Client beanA = applicationContext.getBean(Client.class);
-		Client beanB = applicationContext.getBean(Client.class);
 
-		System.out.println(beanA);
-		System.out.println(beanB);
+		System.out.println(beanA.findFirst());
+		System.out.println(beanA.findFirst());
+		System.out.println(beanA.findFirst());
 	}
 
 }
