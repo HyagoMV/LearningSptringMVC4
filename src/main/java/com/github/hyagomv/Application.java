@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.github.hyagomv.bean.ClassA;
 import com.github.hyagomv.bean.Client;
 
 @SpringBootApplication
@@ -13,10 +12,11 @@ public class Application {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(Application.class);
 
-		Client bean = applicationContext.getBean(Client.class);
+		Client beanA = applicationContext.getBean(Client.class);
+		Client beanB = applicationContext.getBean(Client.class);
 
-		bean.register(new ClassA());
-		System.out.println(bean.findFirst());
+		System.out.println(beanA);
+		System.out.println(beanB);
 	}
 
 }

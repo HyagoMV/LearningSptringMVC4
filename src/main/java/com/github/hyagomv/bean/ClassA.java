@@ -8,4 +8,5 @@ public class ClassA {
 	public String toString() {
 		return ClassA.class.getSimpleName() + new StringJoiner(",", "[", "]");
 	}
+	
 }

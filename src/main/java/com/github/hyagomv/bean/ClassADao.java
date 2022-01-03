@@ -1,15 +1,12 @@
 package com.github.hyagomv.bean;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ClassADao extends Object implements Jdbc<ClassA, Long> {
+public class ClassADao implements Jdbc<ClassA, Long> {
 	
-	public ClassADao() {
-		super();
-		return;
-	}
-
 	@Override
 	public void save(ClassA entity) {
 		System.out.println("Save %s".formatted(entity));
