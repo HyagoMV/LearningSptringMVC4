@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.github.hyagomv.bean.ClassA;
 import com.github.hyagomv.bean.Client;
 
 @SpringBootApplication
@@ -14,7 +15,8 @@ public class Application {
 
 		Client bean = applicationContext.getBean(Client.class);
 
-		bean.getClassX().sayHello();
+		bean.register(new ClassA());
+		System.out.println(bean.findFirst());
 	}
 
 }

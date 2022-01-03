@@ -1,18 +1,11 @@
 package com.github.hyagomv.bean;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+import java.util.StringJoiner;
 
-@Component
-@Primary
-public class ClassA implements ClassX {
-	
-	public ClassA() {
-		return;
-	}
+public class ClassA {
 
-	public void sayHello() {
-		System.out.println("Hello ClassA");
+	@Override
+	public String toString() {
+		return ClassA.class.getSimpleName() + new StringJoiner(",", "[", "]");
 	}
-	
 }
